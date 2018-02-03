@@ -1,29 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Pluto
 {
+
+
+
+    public interface Itaxcalculator
+    {
+         int Sentname();
+    }
+
+
+
     class Program
     {
+
+         public static (string dev1,string ripal) dev()
+        {
+            return ("Dev", ripal:"Ripal");
+        }
+
+
         static void Main(string[] args)
         {
 
-            var dbcontext = new PlutoDbContext();
 
-            var courses = dbcontext.GetCourses();
+            EnumLearn learn = new EnumLearn();
+            learn.regexMatch();
             
-
-            foreach(var c in courses)
-            {
-                Console.WriteLine(c.Title);
-            }
-
             Console.ReadLine();
-
         }
+
 
     }
 }

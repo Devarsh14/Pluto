@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27130.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pluto", "Pluto\Pluto.csproj", "{4467CD84-9A3D-4F68-9CAC-FD0840377C2E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JquerywithNorthWinds", "JquerywithNorthWinds\JquerywithNorthWinds.csproj", "{9A486154-A3D5-493D-A042-DCA233EB1854}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumTests", "SeleniumTests\SeleniumTests.csproj", "{F30A225E-165A-49F2-8537-6E69EE789EE9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{4467CD84-9A3D-4F68-9CAC-FD0840377C2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4467CD84-9A3D-4F68-9CAC-FD0840377C2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4467CD84-9A3D-4F68-9CAC-FD0840377C2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A486154-A3D5-493D-A042-DCA233EB1854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A486154-A3D5-493D-A042-DCA233EB1854}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A486154-A3D5-493D-A042-DCA233EB1854}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A486154-A3D5-493D-A042-DCA233EB1854}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F30A225E-165A-49F2-8537-6E69EE789EE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F30A225E-165A-49F2-8537-6E69EE789EE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F30A225E-165A-49F2-8537-6E69EE789EE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F30A225E-165A-49F2-8537-6E69EE789EE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
