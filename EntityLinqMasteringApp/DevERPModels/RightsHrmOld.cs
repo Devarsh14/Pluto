@@ -1,0 +1,107 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace EntityLinqMasteringApp.DevERPModels
+{
+    public partial class RightsHrmOld
+    {
+        public long HrmrightId { get; set; }
+        public int EmployeeTypeId { get; set; }
+        public bool GiveAccess { get; set; }
+        public string DefaultPage { get; set; }
+        public bool FullAccess { get; set; }
+        public bool EmployeeEntry { get; set; }
+        public bool CreateEmployeeEntry { get; set; }
+        public bool ViewListOfEmployees { get; set; }
+        public bool ChangePasswordOtherEmployeesInList { get; set; }
+        public bool ViewLeavesOtherEmployeesInList { get; set; }
+        public bool ViewRecordOtherEmployeesInList { get; set; }
+        public bool EditEmployeeEntry { get; set; }
+        public bool DeleteEmployeeEntry { get; set; }
+        public bool EditOfficialDetails { get; set; }
+        public bool EditSalaryDetails { get; set; }
+        public bool AttendanceEntry { get; set; }
+        public bool AddAttendanceEntry { get; set; }
+        public bool EditPastAttendanceEntry { get; set; }
+        public bool EnterAttendanceManually { get; set; }
+        public bool OvertimeEntry { get; set; }
+        public bool Leaves { get; set; }
+        public bool AddLeaveBalance { get; set; }
+        public bool AddLeaveRequestSelf { get; set; }
+        public bool LeaveRequestAutoApprove { get; set; }
+        public bool ViewListOfLeaveRequests { get; set; }
+        public bool DeleteLeaveRequest { get; set; }
+        public bool LeaveRequestApproveOtherRequests { get; set; }
+        public bool AddLeaveRequestForOtherEmployee { get; set; }
+        public bool LeaveRequestApprovalAsSupervisor { get; set; }
+        public bool LeaveRequestApprovalAsAdmin { get; set; }
+        public bool DesignationEntry { get; set; }
+        public bool CreateDesignationEntry { get; set; }
+        public bool ViewListOfDesignations { get; set; }
+        public bool EditDesignationEntry { get; set; }
+        public bool DeleteDesignationEntry { get; set; }
+        public bool DepartmentEntry { get; set; }
+        public bool CreateDepartmentEntry { get; set; }
+        public bool ViewListOfDepartments { get; set; }
+        public bool EditDepartmentEntry { get; set; }
+        public bool DeleteDepartmentEntry { get; set; }
+        public bool LeaveTypes { get; set; }
+        public bool CreateLeaveType { get; set; }
+        public bool ViewListOfLeaveTypes { get; set; }
+        public bool EditLeaveType { get; set; }
+        public bool DeleteLeaveType { get; set; }
+        public bool ContactEmployeeViaSms { get; set; }
+        public bool HolidayEntry { get; set; }
+        public bool AddHolidayEntry { get; set; }
+        public bool ViewListOfHolidays { get; set; }
+        public bool EditHolidayEntry { get; set; }
+        public bool DeleteHolidayEntry { get; set; }
+        public bool LeaveRequestReason { get; set; }
+        public bool CreateLeaveRequestReason { get; set; }
+        public bool ViewListOfLeaveRequestReasons { get; set; }
+        public bool EditLeaveRequestReason { get; set; }
+        public bool DeleteLeaveRequestReason { get; set; }
+        public bool LeaveRejectionReason { get; set; }
+        public bool CreateLeaveRejectionReason { get; set; }
+        public bool ViewListOfLeaveRejectionReason { get; set; }
+        public bool EditLeaveRejectionReason { get; set; }
+        public bool DeleteLeaveRejectionReason { get; set; }
+        public bool HrmConfiguration { get; set; }
+        public bool HrmOtherConfiguration { get; set; }
+        public bool HrmReports { get; set; }
+        public bool ViewDesignationHierarchy { get; set; }
+        public bool ViewAttendanceReport { get; set; }
+        public bool ViewProjectedPresence { get; set; }
+        public bool ViewLeaveLog { get; set; }
+        public DateTime CreatedDt { get; set; }
+        public short CreatedUserId { get; set; }
+        public DateTime UpdatedDt { get; set; }
+        public short UpdatedUserId { get; set; }
+        public bool IsDeleted { get; set; }
+        public bool ViewEmpUtilization { get; set; }
+        public bool Salary { get; set; }
+        public bool CalculateSalary { get; set; }
+        public bool IssueSalary { get; set; }
+        public bool ViewSalarySlips { get; set; }
+        public bool ConfigureSalaryComponents { get; set; }
+        public bool Achievement { get; set; }
+        public bool AchievementType { get; set; }
+        public bool EditAchievement { get; set; }
+        public bool DeleteAchievement { get; set; }
+        public bool Indiscipline { get; set; }
+        public bool EnterIndisciplineTypes { get; set; }
+        public bool ViewIndisciplineResponseList { get; set; }
+        public bool CreateIndisciplineEntry { get; set; }
+        public bool EditIndisciplineType { get; set; }
+        public bool DeleteIndisciplineType { get; set; }
+        public bool ReviewIndisciplineEntry { get; set; }
+        public bool ViewIndisciplineEntry { get; set; }
+        public bool DeleteIndisciplineEntry { get; set; }
+        public bool Policy { get; set; }
+        public bool ViewPolicyList { get; set; }
+        public bool CreatePolicyEntry { get; set; }
+        public bool Ammendment { get; set; }
+        public bool CreateAmmendmentEntry { get; set; }
+        public bool ViewAmmendments { get; set; }
+    }
+}

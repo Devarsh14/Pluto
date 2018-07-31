@@ -11,171 +11,94 @@ using System.Data.SqlClient;
 using OpenQA.Selenium.Support.UI;
 using System.Threading;
 using System.IO;
+using OpenQA.Selenium.Interactions;
+
 
 namespace SeleniumTests
 {
-    class Program
+  public  class Program
     {
+        
+
 
 
         static void Main(string[] args)
         {
-
             IWebDriver webDriver = new ChromeDriver();
 
+            webDriver.Navigate().GoToUrl("https://web-dev.oversi.com.au");
+            Thread.Sleep(5000);
 
-            string connectionString = "Data Source=Shivangini;Initial Catalog=Dev_Market;Integrated Security=True;";
-            SqlConnection connection = new SqlConnection(connectionString);
-            connection.Open();
-            Console.WriteLine("Connection is open ");
+            IWebElement emailInput  = webDriver.FindElement(By.Id("Email"));
+            emailInput.SendKeys("devarsh.shukla@orgcanvas.com.au");
 
-            //SqlCommand sqlCommand = new SqlCommand("Select [Security Code] ,[Security Name] from MarketWatch_22_00_2018", connection);
-            //SqlDataReader dataReader = sqlCommand.ExecuteReader();
-
-
-            SqlConnection con2 = new SqlConnection(connectionString);
-            con2.Open();
-
-            webDriver.Url = "http://www.bseindia.com";
-
-            waitSeconds(5);
-            void waitSeconds(int seconds)
-            {
-                System.Threading.Thread.Sleep(seconds * 1000);
-
-            }
-            List<string> companiesID = new List<string>();
-            List<string> companiesName = new List<string>();
-
-            using (SqlCommand sqlCommandScript = new SqlCommand("select * from [dbo].[MarketWatch_22_00_2018] where [Security Group]='A'", connection))
-            {
-                SqlDataReader dataReader2 = sqlCommandScript.ExecuteReader();
-                while (dataReader2.Read())
-                {
-                    companiesID.Add(dataReader2[0].ToString());
-                    companiesName.Add(dataReader2[1].ToString());
-                }
-
-            }
-
-         int n = 0;
-
-
-             while (n < companiesID.Count)
-            {
-                Random random = new Random();
-                n=random.Next(0, companiesID.Count-2);
-
-                waitSeconds(5);
-                IWebElement webElement = webDriver.FindElement(By.Id("suggestBoxEQ"));
-
-                string securityNo = companiesID[n];
-                string securityName = companiesName[n];
-               
-                webElement.SendKeys(securityNo);
-                waitSeconds(2);
-                webElement.SendKeys(Keys.Enter);
-               
-                waitSeconds(5);
-                string prices = string.Empty;
-
-                WebDriverWait wait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(10));
-               
-
-
-
-
-                Console.WriteLine(securityNo+" "+securityName+" "+prices);
-                var prices2 = prices.Split(' ');
-
-                //foreach (var item in prices2)
-                //{
-                //    if (item != string.Empty && item != null)
-                //    {
-                //        //Console.WriteLine(item.Trim());
-                //    }
-
-                //}
-                waitSeconds(10);
-
-                WebDriverWait wait22 = new WebDriverWait(webDriver, TimeSpan.FromSeconds(10));
-                IWebElement result = wait.Until<IWebElement>(d => d.FindElement(By.Id("aFin")));
-                result.Click();
-
-
-                waitSeconds(10);
-                WebDriverWait quartresultDiv = new WebDriverWait(webDriver, TimeSpan.FromSeconds(10));
-                IWebElement resultQarter = wait.Until<IWebElement>(d => d.FindElement(By.Id("ctl00_ContentPlaceHolder1_quatre")));
-
-                string t = resultQarter.Text;
-
-                List<string> s = t.Split(' ').ToList();
-                if (s.Count < 20)
-                {
-                    continue;
-                }
-                for (int i = 0; i < 5; i++)
-                {
-                    Console.WriteLine(s[2 + i]);
-                    Console.WriteLine(s[10 + i]);
-                    Console.WriteLine(s[17 + i]);
-                    Console.WriteLine(s[24 + i]);
-                    Console.WriteLine(s[30 + i]);
-                    Console.WriteLine(s[36 + i]);
-                    Console.WriteLine(s[42 + i]);
-                    Console.WriteLine(s[48 + i]);
-                    Console.WriteLine(s[54 + i]);
-                    Console.WriteLine(s[60 + i]);
-                    Console.WriteLine(s[67 + i]);
-                    Console.WriteLine(s[73 + i]);
-                    Console.WriteLine(s[79 + i]);
-                    Console.WriteLine(s[85 + i]);
-                    Console.WriteLine(s[92 + i]);
-                    Console.WriteLine(s[99 + i]);
-
-                    string query = @" INSERT INTO[dbo].[QuarterlyResultBrief]
-        ([security_Name]
-          ,[security_Number]
-          ,[Quarter]
-          ,[Revenue]
-          ,[Other_Income]
-          ,[Total_Income]
-          ,[Expenditure]
-          ,[interest]
-          ,[PBDT]
-          ,[depereciation]
-          ,[pbt]
-          ,[tax]
-          ,[net_Profit]
-          ,[equity]
-          ,[eps]
-          ,[ceps]
-          ,[opm]
-          ,[npm])
-    VALUES
-          (" + "'" + securityName + "','" + securityNo + "','" + s[2 + i] + "','" + s[10 + i] + "','" + s[17 + i] + "','" + s[24 + i] + "','" + s[30 + i] + "','" + s[36 + i] + "','" + s[42 + i] + "','" + s[48 + i] + "','" + s[54 + i] + "','" + s[60 + i] + "','" + s[67 + i] + "','" + s[73 + i] + "','" + s[79 + i] + "','" + s[85 + i] + "','" + s[92 + i] + "','" + s[99 + i] + "')";
-
-
-                    SqlCommand sqlQarterQuery = new SqlCommand(query, con2);
-                    sqlQarterQuery.ExecuteNonQuery();
-                    
-
-
-
-                }
-
-                n++;
-            }
-        
-       
-             
-            
+            IWebElement  pwd = webDriver.FindElement(By.Id("Password"));
+            pwd.SendKeys("aBc123(");
+            Thread.Sleep(5000);
+            IWebElement btnclick= webDriver.FindElement(By.ClassName("btn-raised"));
+            btnclick.Click();
 
             
 
-            }
+            //string url = @"https://web-dev.oversi.com.au/Risks/Register/Details?id=c1ca89d7-c603-4940-9157-f37613042238";
+            //webDriver.Navigate().GoToUrl(url);
+            //Thread.Sleep(10000);
+
+
+            //string classnameforSwap = "a.ajaxLinkUpdateSingle.btn.btn-primary.bmd-btn-icon.mdi.mdi-18px.mdi-swap-vertical:nth-child(3)";
+            //IWebElement clickswap = webDriver.FindElement(By.CssSelector(classnameforSwap));
+            //clickswap.Click();
+
+            //Thread.Sleep(10000);
+
+            //IWebElement dragelemtnOutOfscreen = webDriver.FindElement(By.CssSelector("div.sidebar-l.sidebar-o.side-scroll.header-navbar-fixed div.slimScrollDiv div.content:nth-child(2) div.container-fluid:nth-child(17) div.card:nth-child(10) div.section.collapse.show div.table-responsive table.table.w-100 tbody:nth-child(2) tr.sortable-tr:nth-child(2) td:nth-child(1) div.btn.bmd-btn-icon:nth-child(1) > i.mdi.mdi-reorder-horizontal.bmd-btn-icon.icon-color.dragitem"));
+            //IWebElement dropto= webDriver.FindElement(By.CssSelector("div.sidebar-l.sidebar-o.side-scroll.header-navbar-fixed div.slimScrollDiv div.content:nth-child(2) div.container-fluid:nth-child(17) div.card:nth-child(10) div.section.collapse.show div.table-responsive table.table.w-100 tbody:nth-child(2) tr.sortable-tr:nth-child(3) td:nth-child(1) div.btn.bmd-btn-icon:nth-child(1) > i.mdi.mdi-reorder-horizontal.bmd-btn-icon.icon-color.dragitem"));
+            //IWebElement dropto2 = webDriver.FindElement(By.CssSelector("div.sidebar-l.sidebar-o.side-scroll.header-navbar-fixed div.slimScrollDiv div.content:nth-child(2) div.container-fluid:nth-child(17) div.card:nth-child(10) div.section.collapse.show div.table-responsive table.table.w-100 tbody:nth-child(2) tr.sortable-tr:nth-child(1) td:nth-child(1) div.btn.bmd-btn-icon:nth-child(1) > i.mdi.mdi-reorder-horizontal.bmd-btn-icon.icon-color.dragitem"));
+
+            ////dragdrop(By.CssSelector("div.sidebar-l.sidebar-o.side-scroll.header-navbar-fixed div.slimScrollDiv div.content:nth-child(2) div.container-fluid:nth-child(17) div.card:nth-child(10) div.section.collapse.show div.table-responsive table.table.w-100 tbody:nth-child(2) tr.sortable-tr:nth-child(1) td:nth-child(1) div.btn.bmd-btn-icon:nth-child(1) > i.mdi.mdi-reorder-horizontal.bmd-btn-icon.icon-color.dragitem")
+            ////    , By.CssSelector("div.sidebar-l.sidebar-o.side-scroll.header-navbar-fixed div.slimScrollDiv div.content:nth-child(2) div.container-fluid:nth-child(17) div.card:nth-child(10) div.section.collapse.show div.table-responsive table.table.w-100 tbody:nth-child(2) tr.sortable-tr:nth-child(3) td:nth-child(1) div.btn.bmd-btn-icon:nth-child(1) > i.mdi.mdi-reorder-horizontal.bmd-btn-icon.icon-color.dragitem"));
+
+
+
+
+            //Actions builder = new Actions(webDriver);
+
+
+            ////builder.dragAndDrop(sourceelement, destelement);
+
+
+
+            //webDriver.SwitchTo().ActiveElement();
+            //builder.DragAndDrop(dragelemtnOutOfscreen, dropto).SendKeys(Keys.Alt+"F").SendKeys(Keys.Escape).Build().Perform();
+            //builder.ContextClick().Build().Perform();
+            //builder.SendKeys(Keys.Escape).Build().Perform();
+            //builder.SendKeys(Keys.F11).Build().Perform();
+            //builder.DragAndDrop(dragelemtnOutOfscreen, dropto2).SendKeys(Keys.Escape).Perform();
             
+
+            // void dragdrop(By ByFrom, By ByTo)
+            //{
+            //    IWebElement LocatorFrom = webDriver.FindElement(ByFrom);
+            //    IWebElement LocatorTo = webDriver.FindElement(ByTo);
+            //    string xto = LocatorTo.Location.X.ToString();
+            //    string yto = LocatorTo.Location.Y.ToString();
+            //    ((IJavaScriptExecutor)webDriver).ExecuteScript("function simulate(f,c,d,e){var b,a=null;for(b in eventMatchers)if(eventMatchers[b].test(c)){a=b;break}if(!a)return!1;document.createEvent?(b=document.createEvent(a),a==\"HTMLEvents\"?b.initEvent(c,!0,!0):b.initMouseEvent(c,!0,!0,document.defaultView,0,d,e,d,e,!1,!1,!1,!1,0,null),f.dispatchEvent(b)):(a=document.createEventObject(),a.detail=0,a.screenX=d,a.screenY=e,a.clientX=d,a.clientY=e,a.ctrlKey=!1,a.altKey=!1,a.shiftKey=!1,a.metaKey=!1,a.button=1,f.fireEvent(\"on\"+c,a));return!0} var eventMatchers={HTMLEvents:/^(?:load|unload|abort|error|select|change|submit|reset|focus|blur|resize|scroll)$/,MouseEvents:/^(?:click|dblclick|mouse(?:down|up|over|move|out))$/}; " +
+            //    "simulate(arguments[0],\"mousedown\",0,0); simulate(arguments[0],\"mousemove\",arguments[1],arguments[2]); simulate(arguments[0],\"mouseup\",arguments[1],arguments[2]); ",
+            //    LocatorFrom, xto, yto);
+            //}
+
+
+
+            Thread.Sleep(10000);
+
+            webDriver.Close();
+            webDriver.Dispose();
+
+
+
         }
+
+    }
 
 
 

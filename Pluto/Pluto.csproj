@@ -72,17 +72,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alphabetical_list_of_product.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
     <Compile Include="Author.cs">
       <DependentUpon>PlutoModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Category.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Category_Sales_for_1997.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Course.cs">
       <DependentUpon>PlutoModel.tt</DependentUpon>
@@ -90,72 +81,12 @@
     <Compile Include="CourseSection.cs">
       <DependentUpon>PlutoModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Current_Product_List.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Customer.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CustomerDemographic.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Customer_and_Suppliers_by_City.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CustOrderHist_Result.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CustOrdersDetail_Result.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CustOrdersOrders_Result.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Employee.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Employee_Sales_by_Country_Result.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
     <Compile Include="EnumLearn.cs" />
     <Compile Include="funcGetAuthorCourses_Result.cs">
       <DependentUpon>PlutoModel.tt</DependentUpon>
     </Compile>
     <Compile Include="GetCourses_Result.cs">
       <DependentUpon>PlutoModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Invoice.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NorthWinDbContext.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NorthWinDbContext.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NorthWinDbContext.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NorthWinDbContext.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NorthWinDbContext.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Order.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Orders_Qry.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Order_Detail.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Order_Details_Extended.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Order_Subtotal.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="PlutoModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -175,67 +106,13 @@
     <Compile Include="Post.cs">
       <DependentUpon>PlutoModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Product.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Products_Above_Average_Price.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Products_by_Category.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Product_Sales_for_1997.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Region.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SalesByCategory_Result.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Sales_by_Category.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Sales_by_Year_Result.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Sales_Totals_by_Amount.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Shipper.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Summary_of_Sales_by_Quarter.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Summary_of_Sales_by_Year.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Supplier.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
     <Compile Include="Tag.cs">
       <DependentUpon>PlutoModel.tt</DependentUpon>
     </Compile>
     <Compile Include="tblUser.cs">
       <DependentUpon>PlutoModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Ten_Most_Expensive_Products_Result.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Territory.cs">
-      <DependentUpon>NorthWinDbContext.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -244,29 +121,12 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>PlutoModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <EntityDeploy Include="NorthWinDbContext.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>NorthWinDbContext.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="NorthWinDbContext.edmx.diagram">
-      <DependentUpon>NorthWinDbContext.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="PlutoModel.edmx.diagram">
       <DependentUpon>PlutoModel.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="NorthWinDbContext.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>NorthWinDbContext.edmx</DependentUpon>
-      <LastGenOutput>NorthWinDbContext.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="NorthWinDbContext.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>NorthWinDbContext.edmx</DependentUpon>
-      <LastGenOutput>NorthWinDbContext.cs</LastGenOutput>
-    </Content>
     <Content Include="PlutoModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>PlutoModel.Context.cs</LastGenOutput>
@@ -292,6 +152,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

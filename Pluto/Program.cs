@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
+
 namespace Pluto
 {
 
@@ -20,23 +21,30 @@ namespace Pluto
 
     class Program
     {
-
-         public static (string dev1,string ripal) dev()
-        {
-            return ("Dev", ripal:"Ripal");
-        }
-
+        
 
         static void Main(string[] args)
         {
 
+            NORTHWNDEntities entities = new NORTHWNDEntities();
 
-            EnumLearn learn = new EnumLearn();
-            learn.regexMatch();
-            
-            Console.ReadLine();
+
+            Employee employee = new Employee();
+
+            employee.FirstName = "Devarsh";
+            employee.LastName = "Shuklaaaa";
+            employee.Notes = "This are my notes";
+
+            entities.Employees.Add(employee);
+            entities.SaveChanges();
+
+
+
+
         }
-
+         
+       
+        
 
     }
 }

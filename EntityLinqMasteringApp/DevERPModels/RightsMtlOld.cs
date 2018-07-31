@@ -1,0 +1,107 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace EntityLinqMasteringApp.DevERPModels
+{
+    public partial class RightsMtlOld
+    {
+        public int MtlrightsId { get; set; }
+        public int EmployeeTypeId { get; set; }
+        public bool GiveAccess { get; set; }
+        public string DefaultPage { get; set; }
+        public bool FullAccess { get; set; }
+        public bool RequestMaterial { get; set; }
+        public bool ReqMtlAutoApprove { get; set; }
+        public bool ReqMtlApproveOtherRequest { get; set; }
+        public bool IssueMaterial { get; set; }
+        public bool IssueMtlApproveOtherRequest { get; set; }
+        public bool DirectIssueMaterial { get; set; }
+        public bool PurchaseRequest { get; set; }
+        public bool PrautoApprove { get; set; }
+        public bool PrapproveOtherRequest { get; set; }
+        public bool PurchaseOrder { get; set; }
+        public bool PoautoApprove { get; set; }
+        public bool PoapprovaeOtherRequest { get; set; }
+        public bool ReceiveMaterial { get; set; }
+        public bool ReceiveMtlAgainstPo { get; set; }
+        public bool ReceiveMtlOtherRequest { get; set; }
+        public bool ReceiveMtlDirectReceive { get; set; }
+        public bool InspectMaterial { get; set; }
+        public bool AcceptInspectedMaterial { get; set; }
+        public bool ReconsileMaterial { get; set; }
+        public bool DumpMaterial { get; set; }
+        public bool DumpExpiredMaterial { get; set; }
+        public bool ReturnMaterialToStore { get; set; }
+        public bool ReceiveMaterialFromCustomer { get; set; }
+        public bool ReturnMaterialToCustomer { get; set; }
+        public bool FinishedGoodsEntry { get; set; }
+        public bool ShowMtlStockValueInReports { get; set; }
+        public bool Category { get; set; }
+        public bool CreateMtlCategory { get; set; }
+        public bool EditMtlCategory { get; set; }
+        public bool DeleteMtlCategory { get; set; }
+        public bool SubCategory { get; set; }
+        public bool CreateMtlSubCategory { get; set; }
+        public bool EditMtlSubCategory { get; set; }
+        public bool DeleteMtlSubCategory { get; set; }
+        public bool Material { get; set; }
+        public bool CreateMaterial { get; set; }
+        public bool EditMaterial { get; set; }
+        public bool DeleteMaterial { get; set; }
+        public bool MtlsupplierEntry { get; set; }
+        public bool ViewListOfMtlsuppliers { get; set; }
+        public bool ActivateOrDeactivateMtlsupplier { get; set; }
+        public bool CreateMtlsupplier { get; set; }
+        public bool UpdateMtlsupplierEntry { get; set; }
+        public bool CreateOrUpdateLoginForMtlsupplier { get; set; }
+        public bool ScrapBuyerEntry { get; set; }
+        public bool ViewListOfScrapBuyers { get; set; }
+        public bool ActivateOrDeactivateScrapBuyer { get; set; }
+        public bool CreateScrapBuyer { get; set; }
+        public bool UpdateScrapBuyerEntry { get; set; }
+        public bool CreateOrUpdateLoginForScrapBuyer { get; set; }
+        public bool CharacteristicEntry { get; set; }
+        public bool ViewListOfCharacteristicGroups { get; set; }
+        public bool CreateCharacteristicGroupEntry { get; set; }
+        public bool DeleteCharacteristicGroupEntry { get; set; }
+        public bool ViewListOfCharacteristics { get; set; }
+        public bool CreateCharacteristicEntry { get; set; }
+        public bool UpdateCharacteristicEntry { get; set; }
+        public bool DeleteCharacteristicEntry { get; set; }
+        public DateTime CreatedDt { get; set; }
+        public short CreatedUserId { get; set; }
+        public DateTime UpdatedDt { get; set; }
+        public short UpdatedUserId { get; set; }
+        public bool IsDeleted { get; set; }
+        public bool MtlRevaluationStock { get; set; }
+        public bool MtlBrands { get; set; }
+        public bool ViewListOfMtlBrands { get; set; }
+        public bool CreateMtlBrand { get; set; }
+        public bool UpdateMtlBrand { get; set; }
+        public bool DeleteMtlBrand { get; set; }
+        public bool Units { get; set; }
+        public bool ViewListOfUnits { get; set; }
+        public bool CreateUnitCategory { get; set; }
+        public bool EditUnitCategory { get; set; }
+        public bool DeleteUnitCategory { get; set; }
+        public bool CreateUnit { get; set; }
+        public bool EditUnit { get; set; }
+        public bool DeleteUnit { get; set; }
+        public bool MtlReports { get; set; }
+        public bool ViewMtlIssueRequests { get; set; }
+        public bool ViewMtlPurchaseRequests { get; set; }
+        public bool ViewMtlIssueHistory { get; set; }
+        public bool ViewMtlPurchaseLog { get; set; }
+        public bool ViewMtlTransactionLog { get; set; }
+        public bool ViewMtlStockStatus { get; set; }
+        public bool ViewMtlConsolidatedStatus { get; set; }
+        public bool ViewMtlConsumptionStatistics { get; set; }
+        public bool ViewMtlExpiredStock { get; set; }
+        public bool ViewMtlSupplierwisePurchaseSummary { get; set; }
+        public bool ViewMtlSupplierwisePaymentHistory { get; set; }
+        public bool ViewMtlStockAvailability { get; set; }
+        public bool ViewSupplierPayables { get; set; }
+        public bool ViewSupplierAnalysis { get; set; }
+        public bool MtlConfigurationAccess { get; set; }
+    }
+}
