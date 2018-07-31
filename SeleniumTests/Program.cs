@@ -24,19 +24,19 @@ namespace SeleniumTests
 
         static void Main(string[] args)
         {
-            IWebDriver webDriver = new ChromeDriver();
+            StockQarter.QarterResult();
 
-            webDriver.Navigate().GoToUrl("https://web-dev.oversi.com.au");
-            Thread.Sleep(5000);
+            //webDriver.Navigate().GoToUrl("https://web-dev.oversi.com.au");
+            //Thread.Sleep(5000);
 
-            IWebElement emailInput  = webDriver.FindElement(By.Id("Email"));
-            emailInput.SendKeys("devarsh.shukla@orgcanvas.com.au");
+            //IWebElement emailInput  = webDriver.FindElement(By.Id("Email"));
+            //emailInput.SendKeys("devarsh.shukla@orgcanvas.com.au");
 
-            IWebElement  pwd = webDriver.FindElement(By.Id("Password"));
-            pwd.SendKeys("aBc123(");
-            Thread.Sleep(5000);
-            IWebElement btnclick= webDriver.FindElement(By.ClassName("btn-raised"));
-            btnclick.Click();
+            //IWebElement  pwd = webDriver.FindElement(By.Id("Password"));
+            //pwd.SendKeys("aBc123(");
+            //Thread.Sleep(5000);
+            //IWebElement btnclick= webDriver.FindElement(By.ClassName("btn-raised"));
+            //btnclick.Click();
 
             
 
@@ -89,11 +89,7 @@ namespace SeleniumTests
 
 
 
-            Thread.Sleep(10000);
-
-            webDriver.Close();
-            webDriver.Dispose();
-
+      
 
 
         }

@@ -32,7 +32,7 @@ namespace SeleniumTests
 
             SqlConnection con2 = new SqlConnection(connectionString);
             con2.Open();
-
+            webDriver.Manage().Window.Maximize();
             webDriver.Url = "http://www.bseindia.com";
 
             waitSeconds(5);
